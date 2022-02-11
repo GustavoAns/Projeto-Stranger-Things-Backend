@@ -19,7 +19,7 @@ app.use(cors());
 
 const PORT_USED = process.env.PORT || 3000;
 
-const hereIsTheUpsideDown = (process.env.MYSQL_USER === 'true');
+const hereIsTheUpsideDown = (process.env.UPSIDEDOWN_MODE === 'true');
 // test
 app.get('/', (req, res) => {
   const characters = strangerThingsService.search(
