@@ -21,7 +21,7 @@ const PORT_USED = process.env.PORT || 3000;
 
 const hereIsTheUpsideDown = (process.env.MYSQL_USER === 'true');
 // test
-app.get('/test', (req, res) => {
+app.get('/', (req, res) => {
   const characters = strangerThingsService.search(
     req.query,
     hereIsTheUpsideDown,
