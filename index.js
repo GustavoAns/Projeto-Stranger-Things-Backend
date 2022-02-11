@@ -17,6 +17,8 @@ const strangerThingsService = new StrangerThingsService(
 
 app.use(cors());
 
+const PORT_USED = process.env.PORT || 3000;
+
 const hereIsTheUpsideDown = (process.env.MYSQL_USER === 'true');
 
 app.get('/', (req, res) => {
@@ -28,6 +30,6 @@ app.get('/', (req, res) => {
   res.status(200).json(characters);
 });
 
-app.listen(3000, () => {
-  console.log('Escutando na porta 3000');
+app.listen(PORT_USED, () => {
+  console.log(`Escutando na porta ${PORT_USED}`);
 });
